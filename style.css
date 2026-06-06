@@ -1,0 +1,275 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+  background: #0f1117;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 100px;
+}
+
+.container {
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile h1{
+    font-size: 28px;
+}
+
+.profile p{
+    color: #9ca3af;
+    margin-top: 5px;
+}
+
+.notification {
+    background: #1a1d26;
+    width: 45px;
+    height:45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.balance-card{
+    background: linear-gradient(135deg,#4f46e5,#7c3aed);
+    padding: 25px;
+    border-radius: 25px;
+    margin-top: 25px;
+}
+
+.balance-card h2{
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.balance-card h1{
+    font-size: 42px;
+    margin-top: 10px;
+}
+
+.balance-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.info-box p{
+    opacity:0.8;
+}
+.info-box h3{
+    margin-top: 5px;
+}
+
+.quick-action {
+    display: flex;
+    gap: 12px;
+    margin-top:25px;
+}
+
+.quick-action button {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    background: #1a1d26;
+    color: white;
+
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.quick-action button:hover {
+    background: #4f46e5;
+}
+.statistics{
+    margin-top: 35px;
+}
+.statistics h2 {
+    margin-bottom: 1rem;
+}
+.stats-card {
+    background: #1a1d26;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.stats-item {
+    margin-bottom: 20px;
+}
+.stats-item:last-child{
+    margin-bottom: 0;
+}
+.stats-item p{
+    color: #9ca3af;
+}
+.stats-item h3{
+    margin-top: 5px;
+}
+
+.transaction-history {
+    margin-top: 35px;
+}
+.transaction-history h2 {
+    margin-bottom: 15px;
+}
+
+.transaction {
+    background: #1a1d26;
+
+    padding: 18px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.transaction-left p{
+    color: #9ca3af;
+    margin-top: 5px;
+}
+
+.transaction-right {
+    color: #f87171;
+    font-weight: bold;
+}
+.income {
+    color : #4ade80;
+}
+.saving-goal {
+    margin-top: 35px;
+}
+.goal-card {
+    background: #1a1d26;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 15px;
+}
+
+.goal-card p{
+    margin-top: 10px;
+    color: #9ca3af
+}
+progress {
+    width: 100%;
+    height: 12px;
+    margin-top: 15px;
+}
+.ai-insight {
+    margin-top: 35px;
+}
+
+.insight-card {
+    background: #1a1d26;
+
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 15px;
+    border-left: 5px solid #4ade80;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #1a1d26;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-around;
+
+    border-top: 1px solid #2a2d38;
+}
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+.nav-item span{
+    margin-top: 5px;
+}
+.chart-section{
+    margin-top: 35px;
+}
+.chart-card{
+    background: #1a1d26;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 15px;
+}
+
+.delete-btn {
+    margin-top: 8px;
+    border: none;
+    background: #d82e2e;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#changeGoalBtn {
+    border: none;
+    background: #1e1e1f;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 12px 20px;
+    margin-top: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#changeGoalBtn:hover {
+    background-color:rgb(82, 79, 79) ;
+    border-radius: 20px;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(238, 238, 241, 0.938);
+}
+
+#searchInput {
+    border: none;
+    margin: 4px 10px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: rgb(202, 201, 201);
+}
+
+#filterType {
+    border: none;
+    padding: 2px 6px;
+    border-radius: 20px;
+    background: rgb(202,201,201);
+}
+.budget-card{
+    background:#111827;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+
+#budgetWarning{
+    margin-top:10px;
+    font-weight:bold;
+}
+#changeBudgetBtn{
+    border: none;
+    padding: 4px;
+    border-radius: 10px;
+}

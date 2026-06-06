@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PocketBudget AI</title>
+
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <h1>PocketBudget AI</h1>
+<div class="container">
+    <header class="header">
+        <div class="profile">
+            <h1>Hallo,Fauzan 👋</h1>
+            <p>Minggu ke-2.mei 2026</p>
+        </div>
+        <div class="notification">
+            🔔
+        </div>
+    </header>
+<!--balance card-->
+    <section class="balance-card">
+        <button id="resetBtn">Reset data</button>
+        <h2>Weekly Balance</h2>
+        <h1 id="balance">Rp.0</h1>
+        <div class="balance-info">
+            <div class="info-box">
+                <p>Remaining</p>
+                <h3>Rp.0</h3>
+            </div>
+
+            <div class="info-box">
+                <p>spent</p>
+                <h3 id="spentAmount">Rp.0</h3>
+        </div>
+        </div>
+    </section>
+    <!--budget bulanan-->
+    <section class="budget-section">
+    <h2>Budget Bulanan</h2>
+
+    <div class="budget-card">
+        <p>Budget:</p>
+        <h3 id="budgetText">Rp.0</h3>
+
+        <p id="budgetWarning">
+            ✅ Budget masih aman
+        </p>
+
+        <button id="changeBudgetBtn">
+            Ubah Budget
+        </button>
+    </div>
+</section>
+
+    <section class="quick-action">
+        <button id="addExpenseBtn">+ pengeluaran</button>
+        <button id="addSavingBtn">+ Tabungan</button>
+        <button id="addIncomeBtn">+ pemasukan</button>
+        <button id="withdrawSavingBtn">Tarik Tabungan</button>
+    </section>
+
+    <section class="statistics">
+        <h2>statistik bulanan</h2>
+        <div class="stats-card">
+            <div class="stats-item">
+                <p>Total pengeluaran</p>
+                <h3 id="totalExpense">Rp 0</h3>
+            </div>
+
+            <div class="stats-item">
+                <p>total pemasukan</p>
+                <h3 id="totalIncome">Rp 0</h3>
+            </div>
+
+            <div class="stats-item">
+                <p>Total Tabungan</p>
+                <h3 id="totalSaving">Rp 0</h3>
+            </div>
+
+            <div class="stats-item">
+                <p>Kategori terbesar</p>
+                <h3>Makanan</h3>
+            </div>
+        </div>
+    </section>
+    <!--grafik bulanan-->
+    <section class="chart-section">
+        <h2>grafik keuangan</h2>
+        <div class="chart-card">
+            <canvas id="financeChart"></canvas>
+        </div>
+    </section>
+
+<input
+    type="text"
+    id="searchInput"
+    placeholder="cari transaksi..."
+    >
+
+    <select id="filterType">
+        <option value="all">semua</option>
+        <option value="income">pemasukan</option>
+        <option value="expense">pengeluaran</option>
+    </select>
+<!--Transaksi Hisrori-->
+<section class="transaction-history" id="transactionHistory">
+    <h2>Transaksi terakhir</h2>
+
+    <div class="transaction">
+        <div class="transaction-left">
+            <h3>Mi ayam 🍜</h3>
+            <p>Makanan • Hari ini</p>
+        </div>
+        <div class="transaction-right">
+            -Rp 15.000
+        </div>
+    </div>
+
+    <div class="transaction">
+        <div class="transaction-left">
+            <h3>Kuota internet</h3>
+            <p>Internet • Kemarin</p>
+        </div>
+
+        <div class="transaction-right">
+            -Rp 25.000
+        </div>
+    </div>
+
+    <div class="transaction">
+        <div class="transaction-left">
+            <h3>Go ride</h3>
+            <p>Transport • Kemarin</p>
+        </div>
+
+        <div class="transaction-right">
+            -Rp 12.000
+        </div>
+    </div>
+</section>
+
+<!--Saving goal-->
+<section class="saving-goal">
+    <h2>Target bulanan</h2>
+    <div class="goal-card">
+        <h3 id="goalName">Sepatu Running</h3>
+        <p id="goal-text">Rp 0 / Rp 350.000</p>
+        <progress id="goalProgress"value="0" max="100"></progress>
+        <button id="changeGoalBtn">
+            🎯 ubah Target
+        </button>
+    </div>
+</section>
+<!--ai-insight-->
+<section class="ai-insight">
+    <h2>AI insight</h2>
+    <div class="insight-card">
+        <p id="aiInsight">
+            pengeluaranmu meningkat minggu ini 💸
+        </p>
+    </div>
+</section>
+<!--bottom navigation-->
+<nav class="bottom-nav">
+    <div class="nav-item">
+        🏠
+        <span>Home</span>
+    </div>
+    <div class="nav-item">
+         📊
+         <span>stats</span>
+    </div>
+    <div class="nav-item">
+        ➕
+        <span>Add</span>
+    </div>
+    <div class="nav-item">
+        🎯
+        <span>goals</span>
+    </div>
+    <div class="nav-item">
+        ⚙️
+        <span>Settings</span>
+    </div>
+</nav>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
